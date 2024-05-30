@@ -1,113 +1,155 @@
-import Image from "next/image";
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+import Container from "@/components/container";
+import Link from "next/link";
+
+import { TbAdjustmentsBolt } from "react-icons/tb";
+import { IoIosThermometer } from "react-icons/io";
+import { BsMouse } from "react-icons/bs";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className="space-y-10">
+        <div className="flex flex-col gap-3 px-5 md:px-16">
+          <img src="/industria.webp" className="rounded-xl" alt="" />
+          <h1 className="text-[26px] font-bold text-[--primary]">THERMO <span className="text-[--secondary]">LUZ</span></h1>
+          <p className="text-[--text]">A Thermoluz é líder em Guarulhos em materiais de aquecimento de alta qualidade, oferecendo resistências tubulares, cartuchos e mais, com expertise técnica e atendimento personalizado.</p>
+          <div className="space-y-8">
+            <div className="mt-6 flex gap-4">
+              <Link className="bg-[--primary] w-[50%] text-[--white] font-medium text-center p-2 rounded-xl hover:-translate-y-[2px] hover:shadow-lg duration-300" href="/">
+                Ver mais sobre
+              </Link>
+              <Link className="bg-[--bg-content] w-[50%] text-[--black] font-medium text-center p-2 rounded-xl hover:-translate-y-[2px] hover:shadow-lg duration-300" href="/products">
+                Produtos
+              </Link>
+            </div>
+            <div className="flex items-center text-[--black] gap-1 mt-2">
+              <BsMouse />
+              <span className="text-xs">Role para ver mais seções</span>
+            </div>
+          </div>
         </div>
+
+          <h1 className="w-full px-5 text-3xl text-[--black] font-medium md:px-16">Nossas linhas</h1>
+          <div className="flex flex-col gap-4 px-5 md:grid md:grid-cols-3 md:px-16">
+            <Container color="bg-[--bg-content]" content={
+              <div className="text-center space-y-5">
+                <div className="inline-flex justify-center bg-[--bg] rounded-full p-3">
+                  <TbAdjustmentsBolt className="size-8 text-[--primary]" />
+                </div>
+                <h4 className="font-medium text-[--black]">Industrias Plásticas</h4>
+                <p className="text-sm text-[--text] px-6">Resistências elétricas são críticas na indústria plástica, regulando temperaturas em processos como moldagem por injeção e extrusão, garantindo a qualidade dos produtos e aquecendo equipamentos fundamentais para a produção.</p>
+              </div>
+            }>
+            </Container>
+            <Container color="bg-[--bg-content]" content={
+              <div className="text-center space-y-5">
+                <div className="inline-flex justify-center bg-[--bg] rounded-full p-3">
+                  <TbAdjustmentsBolt className="size-8 text-[--primary]" />
+                </div>
+                <h4 className="font-medium text-[--black]">Galvanoplastia</h4>
+                <p className="text-sm text-[--text] px-6">Resistências elétricas desempenham um papel crucial na galvanoplastia, controlando a temperatura para garantir a deposição uniforme de metais sobre substratos, assegurando a qualidade dos produtos finais.</p>
+              </div>
+            }>
+            </Container>
+            <Container color="bg-[--bg-content]" content={
+              <div className="text-center space-y-5">
+                <div className="inline-flex justify-center bg-[--bg] rounded-full p-3">
+                  <IoIosThermometer className="size-8 text-[--primary]" />
+                </div>
+                <h4 className="font-medium text-[--black]">Tratamento Térmico</h4>
+                <p className="text-sm text-[--text] px-6">Resistências elétricas desempenham um papel vital tanto na indústria plástica, para controle térmico em processos como moldagem por injeção e extrusão, quanto em tratamentos térmicos, aquecendo materiais para promover mudanças em suas propriedades.</p>
+              </div>
+            }>
+            </Container>
+            <Container color="bg-[--bg-content]" content={
+              <div className="text-center space-y-5">
+                <div className="inline-flex justify-center bg-[--bg] rounded-full p-3">
+                  <TbAdjustmentsBolt className="size-8 text-[--primary]" />
+                </div>
+                <h4 className="font-medium text-[--black]">Indústrias Químicas</h4>
+                <p className="text-sm text-[--text] px-6">Resistências elétricas são essenciais nas indústrias químicas, controlando a temperatura para garantir condições ideais em processos de produção e tratamento de substâncias, promovendo eficiência e segurança operacional.
+                </p>
+              </div>
+            }>
+            </Container>
+            <Container color="bg-[--bg-content]" content={
+              <div className="text-center space-y-5">
+                <div className="inline-flex justify-center bg-[--bg] rounded-full p-3">
+                  <TbAdjustmentsBolt className="size-8 text-[--primary]" />
+                </div>
+                <h4 className="font-medium text-[--black]">Fundições</h4>
+                <p className="text-sm text-[--text] px-6">Resistências elétricas desempenham um papel crucial na fundição, proporcionando o calor necessário para derreter metais e moldá-los em formas específicas, garantindo precisão e eficiência no processo de fabricação de peças fundidas.</p>
+              </div>
+            }>
+            </Container>
+            <Container color="bg-[--bg-content]" content={
+              <div className="text-center space-y-5">
+                <div className="inline-flex justify-center bg-[--bg] rounded-full p-3">
+                  <TbAdjustmentsBolt className="size-8 text-[--primary]" />
+                </div>
+                <h4 className="font-medium text-[--black]">Indústrias Alimentícias</h4>
+                <p className="text-sm text-[--text] px-6">Resistências elétricas são fundamentais nas indústrias alimentícias, controlando com precisão a temperatura em processos como cozimento, assamento, fritura e esterilização, garantindo a segurança e a qualidade dos alimentos produzidos.</p>
+              </div>
+            }>
+            </Container>
+          </div>
+
+          <div className="space-y-2">
+            <Container color="bg-[--primary] mx-5" content={
+                <div className="space-y-3">
+                  <h1 className="flex items-center gap-2 justify-center text-3xl font-semibold text-[--white]">Qualidade</h1>
+                </div>
+              }>
+            </Container>
+            <Container color="bg-[--secondary] mx-5" content={
+                <div className="space-y-3">
+                  <h1 className="flex items-center gap-2 justify-center text-3xl font-semibold text-[--white]">Confiabilidade </h1>
+                </div>
+              }>
+            </Container>
+            <Container color="bg-[--bg-content] mx-5" content={
+                <div className="space-y-3">
+                  <h1 className="flex items-center gap-2 justify-center text-3xl font-semibold text-[--black70]">Durabilidade </h1>
+                </div>
+              }>
+            </Container>
+          </div>
+
+          <div>
+          <h1 className="w-full px-5 text-3xl text-[--black] font-medium md:px-16">Avaliações</h1>
+            <div className="flex flex-col gap-3 px-5 py-8">
+              <div className="w-full flex justify-start">
+                <div className="flex justify-start px-4 py-3 rounded-full items-center gap-4 bg-[--bg-content] w-[85%]">
+                  <img src="pessoa1.jpg" className="w-16 h-16 rounded-full" />
+                  <div className="flex flex-col ">
+                    <span className="text-xs font-medium text-[--black]">Ediléia</span>
+                    <span className="text-[--text] text-xs max-w-72">Maravilhosa a atenção que eles tem com os clientes, estão de parabéns.</span>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full flex justify-end">
+                <div className="flex justify-start px-4 py-3 rounded-full items-center gap-4 bg-[--bg-content] w-[85%]">
+                  <img src="pessoa2.jpg" className="w-16 h-16 rounded-full" />
+                  <div className="flex flex-col ">
+                    <span className="text-xs font-medium text-[--black]">Paulo</span>
+                    <span className="text-[--text] text-xs max-w-72">Maravilhosa a atenção que eles tem com os clientes, estão de parabéns.</span>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full flex justify-start">
+                <div className="flex justify-start px-4 py-3 rounded-full items-center gap-4 bg-[--bg-content] w-[85%]">
+                  <img src="pessoa3.jpg" className="w-16 h-16 rounded-full" />
+                  <div className="flex flex-col ">
+                    <span className="text-xs font-medium text-[--black]">Adailton</span>
+                    <span className="text-[--text] text-xs max-w-72">Maravilhosa a atenção que eles tem com os clientes, estão de parabéns.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    </>
+  )
 }
