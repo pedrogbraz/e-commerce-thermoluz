@@ -17,45 +17,48 @@ export default function Home() {
       <div className="space-y-10">
         <div className="flex flex-col gap-3 px-5 sm:px-12 md:px-16 md:flex-row-reverse md:items-center">
           <motion.img
-          initial={{ opacity: 0, translateX: 20 }}
-          animate={{ opacity: 1, translateX: 0  }}
-          transition={{ delay: 0.4 }}
-          exit={{ opacity: 0, translateX: 20 }}
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.2 }}
           src="/industria.jpg" className="max-h-[320px] rounded-xl" alt="" />
           <div className="space-y-10">  
             <div className="md:w-[90%] md:space-y-6">
               <motion.h1
               initial={{ opacity: 0, translateX: -20 }}
               animate={{ opacity: 1, translateX: 0  }}
-              exit={{ opacity: 0, translateX: -20 }}
-              className="text-[24px] md:text-4xl font-bold text-[--primary]">NOME <span className="text-[--secondary]">DA EMPRESA</span></motion.h1>
+              className="text-[24px] md:text-4xl font-bold text-[--primary]">THERMO <span className="text-[--secondary]">LUZ</span></motion.h1>
               <motion.p
               initial={{ opacity: 0, translateX: 20 }}
               animate={{ opacity: 1, translateX: 0  }}
-              transition={{ delay: 0.2 }}
-              exit={{ opacity: 0, translateX: 20 }}
-              className="text-[--text] text-sm md:text-lg">A (Nome) é líder a mais de 10 anos em São Paulo em materiais de aquecimento de alta qualidade, oferecendo todos os tipos de resistências elétricas e muito mais, com expertise técnica e atendimento personalizado.</motion.p>
+              transition={{ delay: 0.1 }}
+              className="text-[--text] text-sm md:text-lg">A Thermoluz é líder a mais de 10 anos em Guarulhos em materiais de aquecimento de alta qualidade, oferecendo todos os tipos de resistências elétricas e muito mais, com expertise técnica e atendimento personalizado.</motion.p>
               <div className="space-y-8">
-                <motion.div
-                initial={{ opacity: 0, translateY: 20 }}
-                animate={{ opacity: 1, translateY: 0  }}
-                transition={{ delay: 0.2 }}
-                exit={{ opacity: 0, translateY: 20 }}
-                className="mt-6 flex gap-4">
-                  <Link className="bg-[--primary] w-[50%] md:w-[26%] text-[--white] font-medium text-center p-2 rounded-xl hover:-translate-y-[2px] hover:shadow-lg duration-300" href="/">
-                    Ver mais sobre
-                  </Link>
-                  <Link className="bg-[--bg-content] w-[50%] md:w-[26%] text-[--black] font-medium text-center p-2 rounded-xl hover:-translate-y-[2px] hover:shadow-lg duration-300" href="/products">
-                    Produtos
-                  </Link>
-                </motion.div>
+                <div className="mt-6 flex gap-4">
+                  <motion.div className=""
+                  initial={{ opacity: 0, translateY: 20 }}
+                  animate={{ opacity: 1, translateY: 0  }}
+                  transition={{ delay: 0.1 }}
+                  >
+                    <Link className="bg-[--primary] w-full text-[--white] font-medium text-center py-2 px-6 rounded-xl hover:-translate-y-[2px] hover:shadow-lg duration-300" href="/sobre">
+                      Ver mais sobre
+                    </Link>
+                  </motion.div>
+                  <motion.div className=""
+                  initial={{ opacity: 0, translateY: 20 }}
+                  animate={{ opacity: 1, translateY: 0  }}
+                  transition={{ delay: 0.2 }}
+                  >
+                    <Link className="bg-[--bg-content] w-[100%] md:w-[26%] text-[--black] font-medium text-center py-2 px-6 rounded-xl hover:-translate-y-[2px] hover:shadow-lg duration-300" href="/produtos">
+                      Produtos
+                    </Link>
+                  </motion.div>
+                </div>
               </div>
             </div>
           <motion.div
           initial={{ opacity: 0, translateX: -20 }}
           animate={{ opacity: 1, translateX: 0  }}
           transition={{ delay: 0.4 }}
-          exit={{ opacity: 0, translateX: -20 }}
           className="flex items-center text-[--black] gap-1 mt-2">
             <BsMouse />
             <span className="text-xs">Role para ver mais seções</span>
@@ -129,30 +132,51 @@ export default function Home() {
         </div>
 
         <div className="space-y-2 px-5 sm:px-12 md:px-16">
+          <motion.div
+          initial={{ opacity: 0, translateX: -20  }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          >
           <Container color="bg-[--primary]" content={
               <div className="space-y-3">
                 <h1 className="flex items-center gap-2 justify-center text-3xl font-semibold text-[--white]">Qualidade</h1>
               </div>
             }>
           </Container>
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, translateX: 20 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ delay: 0.2 }}
+          >
           <Container color="bg-[--secondary]" content={
               <div className="space-y-3">
                 <h1 className="flex items-center gap-2 justify-center text-3xl font-semibold text-[--white]">Confiabilidade </h1>
               </div>
             }>
           </Container>
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, translateX: -20 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ delay: 0.4 }}
+          >
           <Container color="bg-[--bg-content]" content={
               <div className="space-y-3">
                 <h1 className="flex items-center gap-2 justify-center text-3xl font-semibold text-[--black70]">Durabilidade </h1>
               </div>
             }>
           </Container>
+          </motion.div>
         </div>
 
         <div>
           <h1 className="w-full px-5 sm:px-12 md:px-16 text-3xl text-[--black] font-medium">Avaliações</h1>
           <div className="flex flex-col gap-3 px-5 sm:px-12 md:px-16 py-8">
-            <div className="w-full flex justify-start">
+            <motion.div
+            initial={{ opacity: 0, translateX: -20 }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            exit={{  }}
+            className="w-full flex justify-start">
               <div className="flex justify- px-4 py-3 rounded-full items-center gap-4 bg-[--bg-content] w-[85%]">
                 <img src="pessoa1.jpg" className="w-16 h-16 rounded-full" />
                 <div className="flex flex-col ">
@@ -160,8 +184,12 @@ export default function Home() {
                   <span className="text-[--text] text-xs max-w-72">Maravilhosa a atenção que eles tem com os clientes, estão de parabéns.</span>
                 </div>
               </div>
-            </div>
-            <div className="w-full flex justify-end">
+            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, translateX: 20 }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            exit={{  }}
+            className="w-full flex justify-end">
               <div className="flex justify-end px-4 py-3 rounded-full items-center gap-4 bg-[--bg-content] w-[85%]">
                 <div className="flex flex-col ">
                   <span className="text-xs text-end font-medium text-[--black]">Paulo Gonçalves</span>
@@ -169,8 +197,12 @@ export default function Home() {
                 </div>
                 <img src="pessoa2.jpg" className="w-16 h-16 rounded-full" />
               </div>
-            </div>
-            <div className="w-full flex justify-start">
+            </motion.div>
+            <motion.div
+            initial={{ opacity: 0, translateX: -20 }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            exit={{  }}
+            className="w-full flex justify-start">
               <div className="flex justify-start px-4 py-3 rounded-full items-center gap-4 bg-[--bg-content] w-[85%]">
                 <img src="pessoa3.jpg" className="w-16 h-16 rounded-full" />
                 <div className="flex flex-col ">
@@ -178,7 +210,7 @@ export default function Home() {
                   <span className="text-[--text] text-xs max-w-72">Maravilhosa a atenção que eles tem com os clientes, estão de parabéns.</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

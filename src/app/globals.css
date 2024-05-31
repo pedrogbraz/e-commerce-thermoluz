@@ -19,6 +19,7 @@
     --separator: rgba(0, 0, 0, 0.10);
     --textNavbar: #111111;
     --menubar: hsl(245, 79%, 5%);
+    --buttonProducts: #FFFFFF
   }
 
   .dark {
@@ -35,6 +36,7 @@
     --separator: #2D2E2F;
     --textNavbar: #ffffff;
     --menubar: hsl(0, 0%, 90%);
+    --buttonProducts: #000000
   }
 }
 

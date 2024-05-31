@@ -2,6 +2,15 @@ import { ReactNode } from "react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
 interface ProductsContentProps {
   img?: ReactNode,
   name: string,
@@ -22,7 +31,23 @@ export default function ProductsContent({ img, name, oldPrice, price }: Products
           </div>
         </div>
         <div className="flex justify-between">
-          <Button className="rounded-xl text-[--black] text-xs">Ver mais</Button>
+          <Dialog>
+            <DialogTrigger className="bg-[--bg] text-[--black] rounded-xl px-3 text-xs font-medium">Ver mais</DialogTrigger>
+            <DialogContent className="bg-[--bg] space-y-[10px] border-none text-[--white]">
+              <DialogHeader>
+                <DialogTitle className="font-medium text-[--black]">{name}</DialogTitle>
+              </DialogHeader>
+              <div className="flex">
+                <div className="w-[50%] rounded-xl shadow-md">
+                  <Image src="/tubular6.webp" alt="dawdawd" width={350} height={350} className="rounded-xl" />
+                </div>
+              </div>
+              <div className="flex justify-between gap-16">
+              <Button className="rounded-xl text-xs w-full bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Button>
+              <Button className="rounded-xl text-xs w-full bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Button>
+              </div>
+            </DialogContent>
+          </Dialog>
           <Button className="rounded-xl text-xs bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Button>
         </div>
       </div>
