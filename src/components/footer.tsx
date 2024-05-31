@@ -19,10 +19,10 @@ export default function Footer() {
             <Link href="/products" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
               Produtos
             </Link>
-            <Link href="/about" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
+            <Link href="/sobre" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
               Sobre
             </Link>
-            <Link href="/contacts" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
+            <Link href="/contatos" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
               Contatos
             </Link>
           </div>

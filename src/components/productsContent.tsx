@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactNode } from "react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -6,10 +8,13 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { DialogClose } from "@radix-ui/react-dialog"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 interface ProductsContentProps {
   img?: ReactNode,
@@ -37,15 +42,37 @@ export default function ProductsContent({ img, name, oldPrice, price }: Products
               <DialogHeader>
                 <DialogTitle className="font-medium text-[--black]">{name}</DialogTitle>
               </DialogHeader>
-              <div className="flex">
-                <div className="w-[50%] rounded-xl shadow-md">
-                  <Image src="/tubular6.webp" alt="dawdawd" width={350} height={350} className="rounded-xl" />
+              <div className="flex gap-4">
+                <div className="w-[50%] h-40 rounded-xl shadow-md border">
+                  <Image src="/tubular6.webp" alt="dawdawd" width={350} height={200} className="rounded-xl" />
+                </div>
+                <div className="w-[50%] h-40 rounded-xl">
+                <ScrollArea className="h-[200px] max-h-40 rounded-md text-[--black]">
+                  <div className="flex flex-col text-sm gap-2">
+                    <div>
+                      <h1 className="">{name}</h1>
+                      <div className="flex gap-1">
+                        <span className="line-through text-[--black]">De: {oldPrice}</span>
+                        <span className="font-semibold text-[--primary]">Para: {price}</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h2 className="text-sm">Descrição</h2>
+                      <p className="text-[--text] text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore eos perspiciatis architecto quos sequi, unde laudantium optio possimus atque delectus totam reiciendis aspernatur enim. Voluptatum labore sapiente libero nobis incidunt.</p>
+                    </div>
+                    <div>
+                      <h2 className="text-sm">Medidas</h2>
+                      <p className="text-[--text] text-xs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore eos perspiciatis architecto quos sequi, unde laudantium optio possimus atque delectus totam reiciendis aspernatur enim. Voluptatum labore sapiente libero nobis incidunt.</p>
+                    </div>
+                  </div>
+                </ScrollArea>
                 </div>
               </div>
-              <div className="flex justify-between gap-16">
-              <Button className="rounded-xl text-xs w-full bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Button>
-              <Button className="rounded-xl text-xs w-full bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Button>
-              </div>
+              <DialogFooter>
+                <DialogClose>
+                <Button className="rounded-xl text-xs w-full bg-[--primary] hover:bg-[--primary] duration-300 text-[--white] font-semibold">Fechar</Button>
+                </DialogClose>
+              </DialogFooter>
             </DialogContent>
           </Dialog>
           <Button className="rounded-xl text-xs bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Button>
