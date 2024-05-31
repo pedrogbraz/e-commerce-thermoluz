@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Contacts() {
+export default function Contatos() {
   return (
-    <div className="px-5 space-y-6">
+    <div className="px-5 sm:px-12 md:px-16 space-y-6">
       <div className="flex flex-col items-center gap-4 text-[--text] bg-[--bg-content] px-4 py-10 rounded-xl">
 
         <div className="flex flex-col gap-1 w-full justify-center items-center">

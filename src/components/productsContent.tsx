@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 interface ProductsContentProps {
   img?: ReactNode,
@@ -12,7 +13,7 @@ export default function ProductsContent({ img, name, oldPrice, price }: Products
   return (
     <>
       <div className="bg-[--bg-content] flex flex-col justify-center space-y-4 px-4 py-4 rounded-xl">
-        <img src="/tubular6.webp" alt="" className="rounded-xl hover:-rotate-2 duration-300"/>
+        <Image src="/tubular6.webp" alt="dawdawd" width={200} height={200} className="rounded-xl" />
         <div className="space-y-1 px-1">
           <h1 className="text-sm text-[--black]">{name}</h1>
           <div className="text-xs flex gap-2 justify-start">

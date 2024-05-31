@@ -1,6 +1,6 @@
-export default function About() {
+export default function Sobre() {
   return (
-    <div className="px-5 space-y-6">
+    <div className="px-5 sm:px-12 md:px-16 space-y-6">
      <div className="flex flex-col gap-4 font-light text-[--text] bg-[--bg-content] px-4 py-6 rounded-xl">
      <h1 className="text-3xl font-medium text-[--black70]">Sobre nós</h1>
       <span>A <b className="font-medium">Thermoluz</b> é uma <b className="font-medium">empresa líder</b> sediada em Guarulhos, especializada em soluções de <b className="font-medium">aquecimento de alta qualidade</b> para uma variedade de aplicações industriais e comerciais. Desde a sua fundação, a <b className="font-medium">Thermoluz</b> tem sido uma <b className="font-medium">pioneira</b> em oferecer <b className="font-medium">resistências tubulares, cartuchos</b> e uma ampla gama de materiais de aquecimento, garantindo <b className="font-medium">eficiência</b> e <b className="font-medium">confiabilidade</b> em cada projeto.</span>

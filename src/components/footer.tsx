@@ -4,7 +4,7 @@ import { Separator } from "./ui/separator";
 export default function Footer() {
   return (
     <>
-      <div className="flex px-8 py-10 bg-[--bg-content] rounded-xl items-center mt-8">
+      <div className="flex px-8 sm:px-12 md:px-16 py-10 bg-[--bg-content] rounded-xl items-center mt-16 md:mt-32">
         
         <div className="w-full flex flex-col space-y-6">
         <div className="space-y-1">
@@ -28,10 +28,10 @@ export default function Footer() {
           </div>
           <div className="flex flex-col gap-3">
             <h2 className="text-[--text]">Contatos</h2>
-            <Link href="/" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
+            <Link href="https://wa.me/5511961432251" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
               Whatsapp
             </Link>
-            <Link href="/" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
+            <Link href="https://www.instagram.com/thermoluz_resistencias_/" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
               Instagram
             </Link>
             <Link href="/" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
