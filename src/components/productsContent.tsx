@@ -37,7 +37,7 @@ export default function ProductsContent({ img, name, oldPrice, price }: Products
         </div>
         <div className="flex justify-between">
           <Dialog>
-            <DialogTrigger className="bg-[--bg] text-[--black] rounded-xl px-3 text-xs font-medium">Ver mais</DialogTrigger>
+            <DialogTrigger className="bg-[--bg] text-[--black] rounded-xl py-2 px-1.5 sm:py-2 sm:px-3 text-[10px] sm:text-xs font-medium">Ver mais</DialogTrigger>
             <DialogContent className="bg-[--bg] space-y-[10px] border-none text-[--white]">
               <DialogHeader>
                 <DialogTitle className="font-medium text-[--black]">{name}</DialogTitle>
@@ -75,7 +75,7 @@ export default function ProductsContent({ img, name, oldPrice, price }: Products
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Link href="https://wa.me/5511961432251" target="_blank" className="rounded-xl text-xs py-2 px-3 bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Link>
+          <Link href="https://wa.me/5511961432251" target="_blank" className="rounded-xl text-[10px] sm:text-xs py-2 px-1.5 sm:py-2 sm:px-3 bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Link>
         </div>
       </div>
     </>
