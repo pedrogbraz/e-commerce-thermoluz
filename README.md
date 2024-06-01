@@ -11,6 +11,36 @@ Caso queira ver ele completo <a href="https://pedrogbraz-e-commerce.vercel.app/"
   <img alt="Preview E-commerce" src="public/preview.png" width="100%">
 </p>
 
+## 🚀 Como visualizar
+
+Execute este comando no seu terminal:
+
+```
+git clone https://github.com/pedrogbraz/e-commerce-thermoluz.git
+```
+
+Mover para o diretório
+
+```
+cd ./e-commerce-thermoluz
+```
+
+Instale o projeto com
+
+```
+npm install
+```
+
+E, finalmente, execute o comando:
+
+```
+npm run dev
+```
+
+O projeto será localizado em: `http://localhost:3000`
+
+---
+
 ## 🚀 Tecnologias Usadas
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
