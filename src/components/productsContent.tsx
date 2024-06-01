@@ -7,7 +7,6 @@ import Image from "next/image"
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -15,6 +14,7 @@ import {
 } from "@/components/ui/dialog"
 import { DialogClose } from "@radix-ui/react-dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import Link from "next/link"
 
 interface ProductsContentProps {
   img?: ReactNode,
@@ -27,7 +27,7 @@ export default function ProductsContent({ img, name, oldPrice, price }: Products
   return (
     <>
       <div className="bg-[--bg-content] flex flex-col justify-center space-y-4 px-4 py-4 rounded-xl">
-        <Image src="/tubular6.webp" alt="dawdawd" width={200} height={200} className="rounded-xl" />
+        <Image src="/tubular6.webp" alt="Foto da peça" width={200} height={200} className="rounded-xl" />
         <div className="space-y-1 px-1">
           <h1 className="text-sm text-[--black]">{name}</h1>
           <div className="text-xs flex gap-2 justify-start">
@@ -75,7 +75,7 @@ export default function ProductsContent({ img, name, oldPrice, price }: Products
               </DialogFooter>
             </DialogContent>
           </Dialog>
-          <Button className="rounded-xl text-xs bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Button>
+          <Link href="https://wa.me/5511961432251" target="_blank" className="rounded-xl text-xs py-2 px-3 bg-green-500 hover:bg-green-500/80 duration-300 text-[--white] font-semibold">Comprar</Link>
         </div>
       </div>
     </>

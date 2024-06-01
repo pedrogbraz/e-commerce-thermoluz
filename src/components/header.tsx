@@ -51,7 +51,7 @@ export default function Header() {
                     <Link className="hover:translate-x-[2px] duration-300" href="/termopares">
                       <span>Termopares</span>
                     </Link>
-                    <Link className="flex items-center gap-1" href="/">
+                    <Link className="flex items-center gap-1" href="/produtos">
                       <span>Ver todos</span>
                     </Link>
                 </div>
@@ -65,7 +65,7 @@ export default function Header() {
                   <Link href="mailto:thermoluz.ind@hotmail.com" target="_blank" className="p-2 rounded-[8px] bg-[#EA4335] hover:scale-[1.06] duration-300">
                     <MdOutlineMailOutline className="size-5" />
                   </Link>
-                  <Link href="/" target="_blank" className="p-2 rounded-[8px] bg-blue-500 hover:scale-[1.06] duration-300">
+                  <Link href="/contatos" className="p-2 rounded-[8px] bg-blue-500 hover:scale-[1.06] duration-300">
                     <MdLocalPhone className="size-5" />
                   </Link>
                 </div>

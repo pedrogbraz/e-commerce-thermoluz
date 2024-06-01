@@ -34,7 +34,7 @@ export default function Footer() {
             <Link href="https://www.instagram.com/thermoluz_resistencias_/" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
               Instagram
             </Link>
-            <Link href="/" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
+            <Link href="/contatos" className="text-[13px] hover:translate-x-[2px] duration-300 text-[--black]">
               Telefone
             </Link>
           </div>
